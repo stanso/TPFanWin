@@ -28,6 +28,7 @@ This project implements a Windows service (`TPFanWinService`) to control the fan
     python "C:\Program Files\Python\Python313\Scripts\pywin32_postinstall.py" -install
     ```
     Failure to do this often results in errors when trying to install or run the service.
+    (See the [official pywin32 README](https://github.com/mhammond/pywin32/blob/main/README.md#installing-via-pip) for more details.)
 5.  **`inpoutx64.dll`:** This driver is required for direct hardware port access.
     *   Download the 64-bit version from: [https://www.highrez.co.uk/downloads/inpout32/](https://www.highrez.co.uk/downloads/inpout32/)
     *   Place `inpoutx64.dll` in the **same directory** as `fan_control_logic.py`.
