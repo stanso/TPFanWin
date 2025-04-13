@@ -1,0 +1,3 @@
+# Required packages for TPFanCurve Service
+pywin32==310
+PyYAML==6.0.2

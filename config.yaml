@@ -1,0 +1,23 @@
+# Configuration for TPFanCurve
+
+# Temperature sensor index to use for fan control (0-7)
+# Check ec_control.py output to identify the best sensor (e.g., CPU temp)
+sensor_index: 0
+
+# Update interval in seconds (how often to check temperature and adjust fan)
+update_interval_seconds: 5
+
+# Fan curve definition
+# List of [temperature_threshold, fan_level] pairs.
+# Temperature is in Celsius.
+# Fan level is 0-7 (manual speeds), or 0x80 (BIOS/Auto control).
+# The list MUST be sorted by temperature.
+fan_curve:
+  - [0, 0]    # Below 45C, fan off (Level 0)
+  - [45, 1]   # 45C to 54C, Level 1
+  - [55, 2]   # 55C to 64C, Level 2
+  - [65, 3]   # 65C to 74C, Level 3
+  - [75, 5]   # 75C to 84C, Level 5
+  - [85, 7]   # 85C and above, Level 7
+  # Example: Using AUTO above 80C:
+  # - [80, 0x80]
